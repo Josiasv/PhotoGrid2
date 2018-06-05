@@ -1,0 +1,812 @@
+*{
+	margin: 0;
+	padding: 0;
+font-family: 'Nunito Sans', sans-serif;
+/*font-family: 'Gloria Hallelujah', cursive;*/
+}
+
+
+
+/*NAVBAR COMIENZO*/
+nav {
+    background-color: white;
+    height: 225px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.04); 
+}
+
+.navar ul  {
+	margin-right: 250px;
+	padding: 0;
+	float: right;
+	position: relative;
+	bottom: 115px;
+}
+
+.navar h2{
+	text-transform: uppercase;
+	letter-spacing: 15px;
+	/*font-weight: 500px;*/
+	padding-left: 243px;
+}
+
+#logo {
+	margin-left: 250px;
+	margin-top: 25px;
+}
+
+
+ .navar li  {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 0px 25px 0px 18px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  line-height: 15px;
+  position: relative; /*Se necesita position relative en el elemento padre y position absolute en el elemento hijo para mover en todas las direcciones que se desee al elemento hijo dentro del elemento padre.*/
+}
+
+ .navar li :hover:after{
+	border-bottom: 8px solid rgba(57, 206, 164, 0.40);
+  content: "";
+  left: 20px;
+  margin-top: calc(0.125em / 2 * -1);
+  position: absolute; /*Se necesita position relative en el elemento padre y position absolute en el elemento hijo para mover en todas las direcciones que se desee al elemento hijo dentro del elemento padre.*/
+  right: 25px;
+  top: 30%;
+  border-radius: 3px;
+}
+
+.link {
+  border-right: 2px solid black;
+}
+
+.navar p {
+	color: black;
+}
+
+.navar a {
+  text-decoration: none;
+}
+
+/*NAVBAR FINAL*/
+
+
+
+/*INTRO COMIENZO*/
+
+
+.intro{
+  margin:0 210px 78px 200px;
+  padding-bottom: 250px;
+  padding-left: 100px;
+}
+
+#intro-background{  /*Para que la imagen de fondo no afecte otros elementos de la  seccion padre, se creo un id en html llamado intro-background  */ 
+ background: url("images/teacher.png")  no-repeat;
+  filter: grayscale(100%); /*filter: grayscale(100%) convierte imagenes en general y textos en blanco y negro*/
+    position: absolute; /*The element is removed from the normal document flow; no space is created for the element in the page layout. Instead, it is positioned relative to its closest positioned ancestor if any; otherwise, it is placed relative to the initial containing block. Its final position is determined by the values of top, right, bottom, and left. This value creates a new stacking context when the value of z-index is not auto. Absolutely positioned boxes can have margins, and they do not collapse with any other margins.*/
+    top: 225px;
+    bottom: 0;
+    right: 0;
+    left: 200px;
+   height: 90.6%;
+   z-index: -4;
+}
+
+ .title{
+	text-transform: uppercase;
+	text-align: right;
+	font-size: 5.7em;
+    font-weight: 600;
+    line-height: 105px;
+    position: relative;
+    top: 40px;
+}
+
+.title strong {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  position: relative;
+  top: 5px;
+  color: rgb(61, 229, 204);
+}
+
+.sub-title-intro{
+  background-color: black;
+  color: rgb(54, 216, 178);
+  word-spacing: 10px;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: right;
+  position: relative;
+  top: 60px;
+  right: 30px;
+  padding: 10px 40px 10px 40px;
+  z-index: -5;
+}
+
+.intro-icons {
+ position: absolute;
+ left: 1130px;
+ top: 890px;
+ display: flex;  /*Se utilizo display: flex para hacer los margenes de los iconos mas flexibles y de esa manera juntar los bordes.*/
+}
+
+ .intro-icons a .fa  {
+ background-color: black;
+ /*margin: 0;*/
+  padding: 40px 120px;
+  color: white;
+}
+
+ .intro-icons a .fa:hover {
+  background-color: rgb(61, 229, 204);
+  color: black;
+  transition: background 0.6s; /*La propiedad transition permite establecer una trasicion mas suabe de color o animacion dependiendo de a que elemento se le aplique por ejemplo si cuenta con hover y cierto color cambiante. */
+
+}
+
+.fa-angle-right{
+ /*background-color: black;*/
+  margin-left: 0;
+}
+
+.fa-angle-left{
+ /*background-color: black;*/
+  margin-right: 0;
+}
+
+/*INTRO FINAL*/
+
+
+
+
+/*ABOUT US COMIENZO*/
+
+#about-us{
+  z-index: 9;
+  background-color: black;
+margin:0 ;
+  padding-bottom: 40px;
+  display: grid; /* Con display grid Se fracciono esta seccion de About Us en dos partes (columnas) izquierda y derecha */
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-us-left-content{
+  margin-left: 100px;
+}
+
+.about-us-title {
+  margin: 0 100px 0 200px;
+  padding-top: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3em;
+  line-height: 90px;
+}
+
+.about-us-title strong{
+  color: rgb(54, 216, 178);
+}
+
+.about-us-left p {
+color: white;
+margin: 0 50px 0 200px;
+font-size: 1.4em;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 1px;
+}
+
+.about-us-right{
+  margin: 40px 240px 0 0;
+  padding-top: 40px;
+  border: 4px solid  rgb(54, 216, 178);
+}
+
+.about-us-right-content{
+  margin: 0 10px 40px 10px;
+}
+
+.about-us-right h3{
+  letter-spacing: 3px;
+  margin: 40px 50px 20px 50px;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  color: rgb(54, 216, 178)
+}
+
+.about-us-right p{
+color: white;
+font-size: 1.3em;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 1px;
+ margin: 10px 50px 20px 50px;
+}
+
+.about-us-right .border{
+  border-bottom: 1px solid rgb(54, 216, 192);
+padding-bottom: 50px;
+}
+
+/*ABOUT US FINAL*/
+
+
+
+
+/*OUR SERVICES COMIENZO*/
+
+#our-services {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 47% 53%;
+  grid-template-rows: 1fr 1fr;
+  height: 1400px;
+}
+
+.our-services-left-content{
+  margin: 80px 50px 0 280px ;
+}
+
+.our-services-left-content h1{
+  text-transform: uppercase;
+  font-size: 6.2em;
+  font-weight: bold;
+  line-height: 90px;
+  padding-bottom: 50px;
+}
+
+.our-services-left-content strong{
+  color:  rgb(54, 216, 192);
+}
+
+.our-services-left-content ul{
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  font-size: 2.2em;
+}
+
+.our-services-left-content li{
+  list-style-type: none;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.our-services-list{
+  border-bottom: 1px solid rgb(178, 184, 193);
+}
+
+.our-services-left-content a{
+  text-decoration: none;
+  color: black;
+}
+
+.our-services-left-content a:hover{
+  color: rgb(54, 216, 192);
+  text-decoration: none;
+transition: color 0.3s;
+
+}
+
+.our-services-left-content  li:hover{
+  border-bottom: 2px solid rgb(178, 184, 193);
+}
+
+.our-services-right-content  {
+position: relative;/*Se necesita position relative en el elemento padre y position absolute en el elemento hijo para mover en todas las direcciones que se desee al elemento hijo dentro del elemento padre.*/
+  margin: 0 240px 0 0;
+background: black
+}
+
+.our-services-right-content img{
+  filter: grayscale(100%);
+}
+
+.our-services-banner{
+  background-color: black;
+  padding: 25px 65px 100px 45px; 
+}
+
+.our-services-banner h3{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 2.6em; 
+}
+
+.our-services-banner p{
+  padding-top: 15px;
+  color: white;
+font-size: 1.3em;
+font-weight: 500;
+line-height: 27px;
+letter-spacing: 1px;
+}
+
+.our-services-contact{
+  text-align: right;
+    position: absolute; /*Se necesita position relative en el elemento padre y position absolute en el elemento hijo para mover en todas las direcciones que se desee al elemento hijo dentro del elemento padre.*/
+    right: 0;
+    top: 872px;
+}
+
+.our-services-contact a {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 30px;
+   padding: 15px 30px 18px 35px;
+}
+
+.our-services-contact :hover {
+  background-color: rgb(54, 216, 192);
+  transition: background 0.3s;
+
+}
+
+.our-services-bottom-content{
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  /*position: relative;*/
+  text-align: center;
+  margin: 0 220px 0 280px;
+}
+
+.all-items{
+  padding-left: 40px;
+  width: 100%;
+}
+
+.bottom-item{
+  text-align: left;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 0 5px 0 20px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.bottom-item h1{
+  text-align: left;
+  font-size: 8.5em;
+  letter-spacing: 2px;
+  color:  rgb(54, 216, 178);
+  /*display: flex;*/
+  position: relative;
+  top: 62px;
+  right: 62px
+
+}
+
+.bottom-item h3{
+  text-align: left;
+  position:relative;
+  letter-spacing: 7px;
+  line-height: 40px;
+  font-size: 2.6em;
+  background: black;
+  color: white;
+  padding: 50px 70px 50px 40px;
+  right: 60px;
+}
+
+/*OUR SERVICES FINAL*/
+
+
+/*PROJECTS WE DONE COMIENZO*/
+
+#projects-we-done{
+  background-color: black;
+  color: white;
+  padding-top: 100px;
+  height: 980px;
+}
+
+#projects-we-done h1{
+  padding-top: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 6.5em;
+  line-height: 90px;
+  text-align: left;
+  font-weight: 600px;
+  margin-bottom: 40px;
+}
+
+#projects-we-done strong {
+  color: rgb(54, 216, 178);
+}
+
+.projects-we-done-content{
+  margin: 0 200px 0 260px;
+}
+
+.projects-we-done-icons-content{
+ text-align: right;
+ position: relative;
+ bottom: 150px;
+}
+
+.projects-we-done-icons {
+ height: 21px;
+  width: 21px;
+  background-color: white;
+  margin: 0 0 0 15px;
+  display: inline-block;
+}
+
+.projects-we-done-icons-content a :hover {
+  background-color: rgb(54, 216, 178);
+  transition: background 0.5s;
+}
+
+.projects-we-done-images{
+  display: grid;
+  grid-template-columns: 38% 61%;
+  grid-template-rows: 1fr 1fr;
+  height: 708px;
+}
+
+.projects-we-done-images-first{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  background: linear-gradient( rgba(54, 216, 178, 0.85), rgba(54, 216, 178, 0.85)), url("images/projects image 3.jpg")  no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: 
+}
+
+.projects-we-done-images-first-letters {
+ text-align: left;
+ margin: 360px 0  0 30px;
+}
+
+ .projects-we-done-images-first-letters h2 {
+ text-transform: uppercase;
+ font-size: 3em;
+ letter-spacing: 5px;
+}
+
+ .projects-we-done-images-first-letters h3 {
+ font-size: 1.5em;
+  display: flex;
+margin-top: 0;
+position: relative;
+bottom: 10px;
+letter-spacing: 2px;
+}
+
+.projects-we-done-images-first-letters p {
+margin-top: 10px;
+font-size: 1.3em;
+}
+ 
+.projects-we-done-images-second {
+  background: url("images/projects image 1.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%); 
+}
+
+.projects-we-done-images-third {
+  background: url("images/projects image 2.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: grayscale(100%);
+}
+ 
+/*  PROJECTS WE DONE FINAL*/
+
+
+
+/*OUR SMART TEAM COMIENZO*/
+
+
+#our-smart-team{
+  background-color: white;
+  color: black;
+  padding-top: 100px;
+  height: 1200px;
+}
+
+.our-smart-team-content{
+  margin: 0 200px 0 260px;
+}
+
+#our-smart-team h1{
+  padding-top: 25px;
+  color: black;
+  text-transform: uppercase;
+  font-size: 6.5em;
+  line-height: 90px;
+  text-align: left;
+  font-weight: 600px;
+  margin-bottom: 40px;
+}
+
+#our-smart-team strong {
+  color: rgb(54, 216, 178);
+}
+
+.our-smart-team-icons-content{
+ text-align: right;
+ position: relative;
+ bottom: 150px;
+}
+
+.our-smart-team-icons {
+ height: 21px;
+  width: 21px;
+  background-color: black;
+  margin: 0 0 0 15px;
+  display: inline-block;
+}
+
+.our-smart-team-icons-content a :hover {
+  background-color: rgb(54, 216, 178);
+  transition: background 0.3s;
+}
+
+.our-smart-team-images{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 708px;
+  grid-gap: 40px;
+  position:relative;
+}
+
+.first-background, .second-background, .third-background{
+ background: url("images/teacher.png")  no-repeat;
+ background-position: center center;
+  background-size: cover;
+  filter: grayscale(100%);
+  height: 600px;
+  z-index: 0;
+}
+
+.images-first-text, .images-second-text,.images-third-text{
+  background: black;
+  color: white;
+  font-size: 1.7em;
+  padding: 50px 40px 20px 80px;
+  position: absolute;
+  z-index: 99;
+}
+
+.images-first-text h2, .images-second-text h2,.images-third-text h2{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.images-first-text h4,.images-second-text h4, .images-third-text h4{
+  letter-spacing: 2px;
+  font-weight: lighter;
+}
+
+.images-first-text-icons a, .images-second-text-icons a,.images-third-text-icons a {
+  background: white;
+  color: black;
+  z-index:99;
+   padding: 5px;
+  font-size: 22px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 25px 1px;
+  border-radius: 50%;
+}
+
+
+.our-smart-team-images a:hover {  
+   background-color: rgb(54, 216, 178);
+  transition: background 0.2s;
+
+}
+
+ /*OUR SMART TEAM FINAL*/
+
+
+ /*<!-- GET IN TOUCH COMIENZO -->*/
+
+
+ #get-in-touch{
+  /*z-index: 9;*/
+  background-color: rgb(32, 33, 35);
+margin:0 ;
+  /*padding-bottom: 40px;*/
+ 
+}
+
+.get-in-touch-content{
+  /*margin-left: 100px;*/
+   display: grid; /* Con display grid Se fracciono esta seccion de About Us en dos partes (columnas) izquierda y derecha */
+  grid-template-columns: 1fr 2fr;
+   margin: 0 250px 0 250px;
+}
+
+.get-in-touch-left-content{
+  padding-right: 180px;
+}
+
+.get-in-touch-title {
+ 
+  padding-top: 25px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.5em;
+  line-height: 90px;
+  margin-bottom: 40px;
+}
+
+.get-in-touch-title strong{
+  color: rgb(54, 216, 178);
+}
+
+.get-in-touch-left-content h3{
+  letter-spacing: 3px;
+  /*margin: 40px 50px 20px 50px;*/
+  text-transform: uppercase;
+  font-size: 1.3em;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.get-in-touch-left-content p {
+color: white;
+/*margin: 0 50px 0 200px;*/
+font-size: 1.1em;
+font-weight: 500;
+letter-spacing: 1px;
+line-height: 30px;
+margin-bottom: 40px;
+}
+
+.get-in-touch-left-content i{
+  margin-right: 20px;
+  color: rgb(54, 216, 178);
+
+}
+
+.form-container{
+  margin-top: 200px;
+  height: 620px;
+   background-color: rgb(54, 216, 178);
+   text-align: center;
+   line-height: 90px;
+    padding: 20px 40px 80px 40px;
+}
+form{
+
+}
+
+form h2{
+  color: white;
+  text-transform: uppercase;
+  text-align: left;
+  font-size: 2.3em;
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+}
+
+input[type=text], textarea {
+    width: 95%;
+    height: 50px;
+    padding: 12px;
+    border: 1px solid rgb(54, 216, 178);
+    resize: vertical;
+     font-size: 1.1em;
+     color: black;
+     letter-spacing: 2px;
+}
+
+textarea{
+  margin-top: 10px;
+}
+
+
+
+.send a{
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bolder;
+  background: black;
+  color: white;
+ padding: 20px 325px 20px 325px;
+ font-size: 1.8em;
+ letter-spacing: 3px;
+}
+
+.send a:hover{
+  color: rgb(54, 216, 178) ;
+  transition: color 0.2s;
+
+
+}
+
+::placeholder {
+    color: black;
+    padding-left: 20px;
+     }
+
+
+
+    /*<!-- GET IN TOUCH FINAL -->*/
+
+
+    /*<!-- FOOTER COMIENZO -->*/
+
+
+footer {
+    background-color: black;
+    height: 225px;
+    color: white;
+    position: relative;
+}
+
+#footer-logo {
+  margin-left: 250px;
+  margin-top: 50px;
+}
+
+.subtitle-logo {
+  text-transform: uppercase;
+  font-size: 22px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  /*font-weight: 500px;*/
+  padding-left: 248px;
+  padding-top: 15px;
+}
+
+.logo-text{
+  text-transform: uppercase;
+  font-size: 1.3em;
+  letter-spacing: 15px;
+  position: absolute;
+  bottom: 100px;
+  left: 380px;
+
+  /*font-weight: 500px;*/
+  /*padding-left: 243px;*/
+
+}
+
+.footer-icons{
+  float: right;
+  /*padding-right: 248px;*/
+  position: absolute;
+  bottom: 80px;
+  letter-spacing: 6px;
+  left: 1495px;
+
+}
+
+.footer-icons a{
+  background: white;
+  color: black;
+  z-index:99;
+   padding: 5px;
+  font-size: 22px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 25px 1px;
+  border-radius: 50%;
+}
+
+.footer-icons a:hover{
+  background-color: rgb(54, 216, 178) ;
+  transition: background-color: 0.2s;
+}
